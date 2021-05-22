@@ -3,5 +3,35 @@
     "slug": "bestin_web",
     "name": "Bestin Wallpad contorller addon",
     "description": "Bestin 월패드용 애드온입니다. Bestin홈페이지에서 조작가능한 전등, 환기, 가스밸드 조작을 제공합니다.",
-    "url": 
+    "url": "https://github.com/osias10/ha_addon",
+    "startup" : "application",
+    "boot": "auto",
+    "arch": ["armhfk", "armv7", "aarch64", "amd64", "i386"],
+    "options": {
+        "mqtt": {
+		    "server": "127.0.0.1",
+		    "port": 1883,
+		    "need_login": false,
+		    "user": "",
+		    "passwd": "",
+		    "discovery": true,
+		    "prefix": "bestin"
+		}
+
+    },
+    "schema": {
+        "url": "URL",
+        "id" : "str",
+        "password" : "str",
+
+        "mqtt": {
+			"server": "str",
+			"port": "int(0,65535)",
+			"need_login": "bool",
+			"user": "str?",
+			"passwd": "str?",
+			"discovery": "bool",
+			"prefix": "str"
+		}
+    }
 }

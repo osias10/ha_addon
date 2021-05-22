@@ -9,5 +9,7 @@ RUN python3 -m pip install BeautifulSoup
 
 COPY . /srv
 RUN chmod a+x /srv/run_addon.sh
+RUN python3 -m pip install paho-mqtt
+
 
 WORKDIR /shar
